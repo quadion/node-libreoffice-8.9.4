@@ -11,6 +11,7 @@ RUN apt-get update \
  python-software-properties \
  python-pip \
  python-yaml \
+ openssh-client \
 && pip install -U setuptools \
 && pip install awscli \
 && add-apt-repository ppa:libreoffice/ppa \
