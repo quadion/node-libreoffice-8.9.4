@@ -2,6 +2,7 @@ FROM node:8.9.4-slim
 RUN apt-get update \
 && apt-get install -y \
  zip \
+ apt-transport-https \
  build-essential \
  libcairo2-dev \
  libpango1.0-dev \
@@ -14,6 +15,8 @@ RUN apt-get update \
  openssh-client \
 && pip install -U setuptools \
 && pip install awscli \
-&& add-apt-repository ppa:libreoffice/ppa \
-&& apt-get install -y \
- libreoffice
+&& add-apt-repository "deb https://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" \
+&& apt-get update \
+&& apt-get install -y --force-yes \
+ libreoffice \
+ postgresql-client-9.6
