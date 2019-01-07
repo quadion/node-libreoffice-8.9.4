@@ -19,4 +19,5 @@ RUN apt-get update \
 && apt-get update \
 && apt-get install -y --force-yes \
  libreoffice \
- postgresql-client-9.6
+ postgresql-client-9.6 \
+ git
